@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'graphs',
+    loadChildren: () => import('./pages/graphs/graphs.module').then( m => m.GraphsPageModule)
+  },
+  {
+    path: 'gps',
+    loadChildren: () => import('./pages/gps/gps.module').then( m => m.GpsPageModule)
+  },
 ];
 
 @NgModule({
